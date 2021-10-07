@@ -1,0 +1,178 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+header {
+    padding: 10px ;
+    display: flex;
+    justify-content: space-between;
+}@keyframes checked-anim {
+    50% {
+        width: 250px;
+        height: 200px;
+    }
+    100% {
+        width: 250px;
+        height: 200px;
+        border-radius: 0;
+    }
+}
+@keyframes not-checked-anim {
+    0% {
+        width: 250px;
+        height: 200px;
+    }
+}
+li, a {
+    margin: 75px 0 -55px 0;
+    color: orange;
+    font: 14pt "Roboto", sans-serif;
+    font-weight: 400;
+    text-decoration: none;
+    display: none;
+}
+li {
+    width: 230px;
+    text-indent: 56px;}
+a:focus {
+    display: block;
+    color: #333;
+    background-color: #eee;
+    transition: all .5s;
+    z-index: 1000;
+}
+#trigger, #burger, #burger:before, #burger:after {
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    background: orange;
+    width: 30px;
+    height: 5px;
+    transition: .2s ease;
+    cursor: pointer;
+    z-index: 500;
+}
+#trigger {
+    height: 25px;
+    background: none;
+}
+#burger:before {
+    content: " ";
+    top: 10px;
+    left: 0;
+}
+#burger:after {
+    content: " ";
+    top: 20px;
+    left: 0;
+}
+#menu-toggle:checked + #trigger + #burger {
+    top: 35px;
+    transform: rotate(180deg);
+    transition: transform .2s ease;
+}
+#menu-toggle:checked + #trigger + #burger:before {
+    width: 20px;
+    top: -2px;
+    left: 18px;
+    transform: rotate(45deg) translateX(-5px);
+    transition: transform .2s ease;
+    
+}
+#menu-toggle:checked + #trigger + #burger:after {
+    width: 20px;
+    top: 2px;
+    left: 18px;
+    transform: rotate(-45deg) translateX(-5px);
+    transition: transform .2s ease;
+    
+}
+#menu {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.26);
+    animation: not-checked-anim .1s both;
+    transition: .2s;
+    z-index: 200;
+}
+#menu-toggle:checked + #trigger + #burger + #menu {
+    animation: checked-anim 0.2s ease both;
+}
+#menu-toggle:checked + #trigger ~ #menu > li, a {
+    display: block;
+}
+[type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+    display: none;
+}
+.Nickname{
+    padding-left: 40px;
+    text-align: center;
+}
+.Nickname p{
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+h1{
+    color: orange;
+    font-size: 40px;
+}
+input[type="search"]{
+    width: 45px; 
+    padding: 9px 10px 9px 32px;
+    border-radius: 15em;
+    transition: all .5s;
+    border-color: orange;
+    
+}
+input[type="search"]:focus{
+    width: 130px;
+    padding-left: 32px;
+    background-color: #FFF;
+}
+.fas{
+    color: orange;
+    font-size: 20px;
+}
+article {
+    margin-top: 50px;
+    width: 100%;
+    position: relative;
+}
+article img {
+    width: 100%;
+}
+article h2 {
+    padding: 30px 8px 0px;
+    color: rgb(3, 5, 6);
+}
+article p {
+    padding: 10px 10px 10px;
+    color: slategray;
+}
+article .fecha {
+    position: absolute;
+    top:15px;
+    right:2px;
+    font-weight: 700;
+    color: orange;
+}
+article div:last-child {
+    position: absolute;
+    bottom: 4px;
+    right: 0;
+    background: white;
+    height: max-content;
+    padding: 5px 20px;
+}
+article div.Nacional {
+    background-color: cornflowerblue;
+}
+article div.Internacional {
+    background-color: darkgreen;
+}
+footer{
+background-color: orange;
+color: white;
+text-align: center;
+}
