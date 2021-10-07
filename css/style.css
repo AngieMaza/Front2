@@ -38,10 +38,10 @@ h2{
   font-size: 1.5rem;
   transition: all 0.5s ease;
 }
-a {
-  color: rgb(55, 102, 110);
+.listamenu ul li a {
+  color: blueviolet;
 }
-a :visited{
+.listamenu :visited{
   color: rgb(55, 102, 110);
 }
 .listamenu li:hover{
