@@ -22,9 +22,12 @@
                 <i class="fab fa-vk"></i>
             </div>
             <p>or use your email for registration:</p>
-            <input type="text" name="nombre" id="name" placeholder="Name">
+            <input type="text" class="" name="nombre" id="name" placeholder="Name">
+            <small id="errorNombre" class="oculto errorInput">El nombre no puede contener caracteres especiales o tener mas de 25 caracteres</small>
             <input type="email" name="email" id="email" placeholder="Email">
+            <small id="errorEmail" class="oculto errorInput">Email no valido</small>
             <input type="password" name="pass" id="pass" placeholder="Password">
+            <small id="errorPass" class="oculto errorInput">La contraseña debe tener entre 8 y 20 caracteres</small>
             <div class="terminos">
                 <input type="checkbox" name="terminos" id="Terms">
                 <label for="Terms">I agree to the <a href="">Terms</a> and <a href="">Privacy Policy</a>.</label>
