@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ToDo</title>
+  <!-- ---------------- estilos compartidos de login y signup ---------------- -->
+  <link rel="stylesheet" href="styles/ingreso.css">
+</head>
+
+<body>
+
+  <div class="left">
+    <img src="./assets/persona-signup.png" alt="">
+  </div>
+  <div class="right">
+    <form>
+      <div class="form-header">
+        <p>To-Do App</p>
+      </div>
+
+      <label>
+        Nombre:
+        <input type="text" class="name">
+        <p class="oculto vacio">*Este campo no puede estar vacio*</p>
+      </label>
+      <label>
+        Apellido:
+        <input type="text" class="lastName">
+        <p class="oculto vacio">*Este campo no puede estar vacio*</p>
+      </label>
+      <label>
+        Email:
+        <input type="text" class="email">
+        <p class="oculto vacio">*Este campo no puede estar vacio*</p>
+      </label>
+      <label>
+        Contraseña:
+        <input type="password" class="pass">
+        <p class="oculto vacio">*Este campo no puede estar vacio*</p>
+      </label>
+      <label>
+        Repetir contraseña:
+        <input type="password" class="confirPass">
+        <p class="oculto error">*Las contraseñas no coinciden*</p>
+        <p class="oculto vacio">*Este campo no puede estar vacio*</p>
+      </label>
+
+      <button>Crear Cuenta</button>
+
+    </form>
+    <div class="ingresarA">
+      <a href="index.html">¿Ya tiene una cuenta? Ingrese aquí</a>
+    </div>
+  </div>
+    <!-- ---------------------- logica aplicada en register -------------------- -->
+    <script src="./scripts/util.js"></script>
+    <script src="./scripts/singup.js"></script>
+</body>
+
+</html>
