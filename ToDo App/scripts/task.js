@@ -1,4 +1,4 @@
-const key = localStorage.getItem('token');
+const key = localStorage.getItem('token')||sessionStorage.getItem('token');
 const url = 'https://ctd-todo-api.herokuapp.com/v1';
 
 window.addEventListener('load', function () {
@@ -21,7 +21,8 @@ window.addEventListener('load', function () {
 });
 
 function cerrarSesion() {
-    localStorage.removeItem('token')
+    localStorage.clear();
+    sessionStorage.clear();
     location.href = "./index.html"
 }
 
