@@ -14,7 +14,7 @@ const statsNames = {
   
     cardContainer.innerHTML = `
       <img
-        src="${order}"
+        src=""
         class="card-img-top"
         alt="pokemon-${order}"
         id="imagen-pokemon-${order}"
